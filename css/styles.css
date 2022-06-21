@@ -6,7 +6,9 @@
 --secondary-background-color: #F5F4FA;
 --brand-color:#2F303A;
 --hero-button-color:#188CE8;
+--icon-background: #AFB1B8;
 --typical-margin:30px;
+
 }
 
 /* About body */
@@ -67,7 +69,7 @@ margin: 0;
       margin:0 auto;
       padding-left: 15px;
       padding-right: 15px;
-      outline: ;
+      
   }
  
     /* About logo */
@@ -123,7 +125,7 @@ align-items: center;}
 .contacts {
 display: flex;
 margin-left: auto;}
-.contaсt-link {
+.contaсt-link, .contact-mobile-link {
  font-style: normal;
 font-weight: 500;
 line-height: 1.14;
@@ -133,18 +135,27 @@ color: var(--secondary-text-color);
 .contact-link:hover,
 .contact-link:focus {color:var(--accent-color);}
 
+.contact-mobile-link:hover,
+.contact-mobile-link:focus {color:var(--accent-color);} 
+
+    
+
 /* About contact-icons */
  
 .contact-item {display: flex;
     align-items: center;
     justify-content: center;
-    
-    
 }
-.header-icon {margin-right: 10px;
-    fill:  rgba(117, 117, 117, 1);}
-    .header-icon:hover,
-    .header-icon:focus {fill:currentColor;}
+.mobile-icon,.contact-icon { 
+    margin-right: 10px;
+    fill: var(--secondary-text-color);}
+
+    .contact-link:hover .contact-icon,
+    .contact-link:focus .contact-icon {fill:var(--accent-color);}  
+
+    .contact-mobile-link:hover .mobile-icon,
+    .contact-mobile-link:focus .mobile-icon {fill:var(--accent-color);}  
+
 
 /* About contact-mobile */
 .contaсt-mobile {
@@ -168,13 +179,12 @@ color: var(--secondary-text-color);
  padding: 200px 0;
 } 
 .hero {
-max-width: 1200px;
+max-width: 1600px;
 height: 600px;
 background-image: linear-gradient(
-to right
+to right,
 rgba(47, 48, 58, 0.4),
-rgba(47, 48, 58, 0.4)
-), 
+rgba(47, 48, 58, 0.4)), 
 url(../images/img17.jpg);
 background-repeat: no-repeat;
 background-position: center;
@@ -225,7 +235,22 @@ cursor: pointer;
         background-color:  var(--hero-button-color);
  }
    
-/* About STUDIO-hidden  benefits 1*/
+/* About STUDIO-hidden  benefits1 icons*/
+
+.hidden-benefits { display: flex;
+    align-items: center;
+    justify-content: center;
+    background-position:center;
+    width: 270px;
+    height: 120px;
+    border-radius: 4px;;
+    margin-right: 30px;
+    margin-bottom: 30px;
+    background-color: #F5F4FA;
+    }
+.hidden-benefits:last-child {margin-right: 0px;} 
+.hidden-icons {fill: var(--primary-text-color);}
+
 .studio-benefits {
  padding-top: 94px;
  padding-bottom: 94px;
@@ -325,6 +350,62 @@ display: flex;
         letter-spacing: 0.03em;
 color: var(--secondary-text-color);
 }
+/* About company-icons */
+.icon-list { display:flex;
+   justify-content: center;
+   
+}
+.company-soc-link {
+    display: block;
+    width: 100%;
+    height: 100%;
+    
+    border-radius: 0px 0px 4px 4px;
+border-radius: 50%;}
+.icon-item {
+margin-left: 10px;
+margin-bottom: 30px;
+}
+.company-icons:first-child {margin-left: 0px;}
+
+.icons {fill:var(--icon-background)}
+.company-soc-link:hover, 
+.company-soc-link:focus {background-color:var(--accent-color);}
+
+.company-soc-link:hover .icons,
+.company-soc-link:focus .icons {fill: var(--main-background-color);}
+
+/* About clients */
+.client-list {display: flex; 
+    justify-content: center;
+ }
+
+.regular-clients {padding-top: 94px;
+padding-bottom: 94px;
+}
+
+.client-title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.16;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: #212121;
+    margin-bottom: 50px;}
+.client-item {margin-left: 30px;}
+.client-item:first-child {margin-left: 0px;}
+
+.client-soc-link { display: inline-block;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #AFB1B8;
+border-radius: 4px;
+}
+.client-icon {fill: var(--icon-background);}
+
+.client-icon:hover,
+.client-icon:focus {fill: var(--accent-color);}
+
 
        /*Portfolio buttons */
        .main-content {padding: 94px 0px}
@@ -402,6 +483,8 @@ border-top: none;
 }
 .adress {
     margin-top: 20px;
+    width: 231px;
+    height: 81px;
 }
 .footer-item {
     margin-bottom: 9px;
@@ -453,16 +536,47 @@ border-top: none;
         .footer-phone:hover,
         .footer-phone:focus {color: var(--accent-color);}     
        
-        
-      
+        /* About footer icons */
+        .footer-icons {width: 206px;
+        height: 80px;}
+        .footer-list {
+            display: flex;
+        justify-content: center;}
 
-
+        .footer-icon-text {
+            
+            margin-bottom: 36px;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 1.14;
+            letter-spacing: 0.03em;
+            text-transform: uppercase;
+            
+            color: #FFFFFF;}
+            .footer-list {}
 
 
     
+            .footer-soc-link {
+                display: block;
+                width: 100%;
+                height: 100%;
+                
+                border-radius: 0px 0px 4px 4px;
+            border-radius: 50%;}
+            .footer-item {
+            margin-left: 10px;
+            margin-bottom: 30px;
+            }
+            .footer-icon {margin-left: 30px;}
+            .fopter-icon:first-child {margin-left: 0px;}
 
-    
-        
-
+            .footer-icon {fill: var(--main-background-color);}
+            .footer-soc-link {background-color:rgba(255, 255, 255, 0.1);}
+            
+            .footer-soc-link:hover, 
+            .footer-soc-link:focus {background-color:var(--accent-color);}
+            
+            
 
  
