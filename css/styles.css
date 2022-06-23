@@ -6,7 +6,7 @@
 --secondary-background-color: #F5F4FA;
 --brand-color:#2F303A;
 --hero-button-color:#188CE8;
---icon-background: #AFB1B8;
+--icon-background-color: #AFB1B8;
 --typical-margin:30px;
 
 }
@@ -79,7 +79,7 @@ margin: 0;
         .nav-item:first-child {margin-left: 0;}
     .nav-logo {padding-top: 24px;
     padding-bottom: 25px;
-display: flex;
+    display: flex;
 }
     
 .nav-logo {
@@ -111,7 +111,8 @@ align-items: center;}
 }
  .nav-link {padding-top: 32px;
     padding-bottom: 32px; 
-     display:block;}
+     display:flex;
+    text-align: center;}
 .nav-link {color: var(--primary-text-color);}
 .nav-link:hover,
 .nav-link:focus
@@ -125,8 +126,9 @@ align-items: center;}
 .contacts {
 display: flex;
 margin-left: auto;}
-.contaсt-link, .contact-mobile-link {
+ .contact-link {
  font-style: normal;
+ font-size: 14px;
 font-weight: 500;
 line-height: 1.14;
 letter-spacing: 0.02em;
@@ -135,10 +137,22 @@ color: var(--secondary-text-color);
 .contact-link:hover,
 .contact-link:focus {color:var(--accent-color);}
 
+.contact-mobile-link{
+    font-style: normal;
+    font-size: 14px;
+   font-weight: 500;
+   line-height: 1.14;
+   letter-spacing: 0.02em;
+   color: var(--secondary-text-color);
+   }
 .contact-mobile-link:hover,
 .contact-mobile-link:focus {color:var(--accent-color);} 
 
-    
+.contact-link, .contact-mobile-link {
+    display: flex;
+    padding-top: 32px;
+    padding-bottom: 32px; }
+.contact-item +.contact-item {margin-left: 50px;}   
 
 /* About contact-icons */
  
@@ -148,7 +162,7 @@ color: var(--secondary-text-color);
 }
 .mobile-icon,.contact-icon { 
     margin-right: 10px;
-    fill: var(--secondary-text-color);}
+    fill: currentColor;}
 
     .contact-link:hover .contact-icon,
     .contact-link:focus .contact-icon {fill:var(--accent-color);}  
@@ -156,25 +170,7 @@ color: var(--secondary-text-color);
     .contact-mobile-link:hover .mobile-icon,
     .contact-mobile-link:focus .mobile-icon {fill:var(--accent-color);}  
 
-
-/* About contact-mobile */
-.contaсt-mobile {
-    font-style: normal;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.02em;
-    color: var(--secondary-text-color);
-   
-    }
-    .contact-mobile:hover,
-    .contact-mobile:focus {color:var(--accent-color);}
-
-.contact-link, .contact-mobile {padding-top: 32px;
-    padding-bottom: 32px; display: block}
-.contact-item +.contact-item {margin-left: 50px;}
-
- /* About HERO */
+/* About HERO */
  .hero {background-color: var(--brand-color);
  padding: 200px 0;
 } 
@@ -311,7 +307,7 @@ display: flex;
         background-color: var(--secondary-background-color);}
     .team-list {display: flex; text-align: center;} 
 
-.company {margin-bottom: 50px;
+.company {
         font-family: inherit;
         font-style: normal;
         font-weight: 700;
@@ -353,30 +349,33 @@ color: var(--secondary-text-color);
 /* About company-icons */
 .icon-list { display:flex;
    justify-content: center;
-   
-}
-.company-soc-link {
-    display: block;
-    width: 100%;
-    height: 100%;
-    
-    border-radius: 0px 0px 4px 4px;
-border-radius: 50%;}
-.icon-item {
-margin-left: 10px;
-margin-bottom: 30px;
-}
-.company-icons:first-child {margin-left: 0px;}
+   margin-bottom: 30px;
+   }
+ .icon-item {
+    margin-left: 10px;}
+.icon-item:first-child {margin-left: 0px;}
 
-.icons {fill:var(--icon-background)}
-.company-soc-link:hover, 
+.company-soc-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px; 
+    height:44px;
+    border-radius: 50%;
+    color:var(--icon-background-color);
+    
+}
+.icons {fill:currentColor}
+.company-soc-link:hover,
 .company-soc-link:focus {background-color:var(--accent-color);}
 
-.company-soc-link:hover .icons,
+.company-soc-link:hover,.icons
 .company-soc-link:focus .icons {fill: var(--main-background-color);}
 
+
+
 /* About company cards shadow */
-.card-set { box-shadow:1px 4px 6px ;
+.card-set { box-shadow:1px 2px 2px ;
 }
 
 /* About clients */
