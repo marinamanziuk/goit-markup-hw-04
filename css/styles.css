@@ -143,6 +143,8 @@ color: var(--secondary-text-color);
    font-weight: 500;
    line-height: 1.14;
    letter-spacing: 0.02em;
+   align-items: center;
+   
    color: var(--secondary-text-color);
    }
 .contact-mobile-link:hover,
@@ -351,7 +353,7 @@ color: var(--secondary-text-color);
 /* About company-icons */
 .icon-list { display:flex;
    justify-content: center;
-   margin-bottom: 30px;
+   margin-top: 16px;
    }
  .icon-item {
     margin-left: 10px;}
@@ -366,6 +368,9 @@ color: var(--secondary-text-color);
     border-radius: 50%;
     color: var(--icon-background-color);
     background-color:var(--main-background-color);
+    border-radius: 0px 0px 4px 4px;}
+    .card-set {
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     
 }
 .company-soc-link:hover,
@@ -373,11 +378,6 @@ color: var(--secondary-text-color);
 .icons {fill:currentColor}
 .company-soc-link:hover, .icons
 .company-soc-link:focus .icons {color:var(--main-background-color);}
-
-
-/* About company cards shadow */
-.card-set { box-shadow:1px 2px 2px ;
-}
 
 /* About clients */
 .client-list {display: flex; 
@@ -421,12 +421,7 @@ color:var(--icon-background-color);
 fill:  var(--accent-color);
 }
 
-
-
-
-
-
-       /*Portfolio buttons */
+/*Portfolio buttons */
        .main-content {padding: 94px 0px}
        .button-list {display: flex;
         justify-content: center;
@@ -452,22 +447,15 @@ fill:  var(--accent-color);
 
             .portfolio-button:hover,
             .portfolio-button:focus {color:var(--main-background-color);
-                background-color:var(--accent-color); 
-            }
-       /* About portfolio buttons shadow */
-       .button-item:hover,
-       .button-item:focus {box-shadow:1px 4px 6px ;}
+            background-color:var(--accent-color); 
+            box-shadow:  3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);}
       
-       /*Gallery list PORTFOLIO  */
-       .gallery-img:hover,
-       .gallery-img:focus {box-shadow:1px 4px 6px ;}
-       
+            /*Gallery cards PORTFOLIO  */
 
-   .gallery-item {
+  .gallery-item {
     display: flex;
     flex-wrap: wrap;
 }
-   
    .gallery-site {
     font-weight: 700;
     font-size: 18px;
@@ -497,9 +485,9 @@ fill:  var(--accent-color);
 border-bottom: 1px solid #EEEEEE;
 border-top: none;
 }
-/* About Portfolio shadow */
-.gallery-img:hover,
-.gallery-img:focus {box-shadow:1px 2px 4px ;}
+.gallery-link {display: block;}
+.gallery-link:hover,
+.gallery-link:focus {box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);}
 
 
 /* About footer */
@@ -524,26 +512,29 @@ align-items: baseline;}
     color:  var(--main-background-color);}
 .footer-logo-accent {color: var(--accent-color);}
 
-.footer-maps {
+.footer-adress {
     font-family: 'Roboto';
     font-weight: 400;
     font-size: 14px;
     line-height:1.71;
     letter-spacing: 0.03em;
     color:var(--main-background-color)} 
+
     .footer-maps:hover,
     .footer-maps:focus {color:var(--accent-color);}
 
-    
-    .footer-link {font-family: inherit;
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 0.14;
-        letter-spacing: 0.03em;
-        color:rgba(255, 255, 255, 0.6);
-    }    
-    .footer-link:hover,
-    .footer-link:focus {color: var(--accent-color);}
+    .footer-mail  {
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 1.71;
+letter-spacing: 0.03em;
+color: rgba(255, 255, 255, 0.6);}
+
+    .footer-mail:hover,
+    .footer-mail:focus {color: var(--accent-color);}
+
             .footer-phone {font-family: 'Roboto';
             font-weight: 400;
             font-size: 14px;
@@ -556,9 +547,8 @@ align-items: baseline;}
         .footer-phone:focus {color: var(--accent-color);}    
         
         /* About footer icons */
-        .footer-soc-icons {display: flex;}
+        .footer-soc-icons {margin-left:70px;}
            .footer-icon-text {
-            margin-bottom: 20px;
             font-weight: 700;
             font-size: 14px;
             line-height: 1.14;
@@ -567,8 +557,8 @@ align-items: baseline;}
             color: var(--main-background-color);}
 
             .footer-icon-item {margin-left: 10px;}
-            .footer-scon-item:first-child {margin-left: 0px;}
-
+            .footer-icon-item:first-child {margin-left: 0px;}
+            .icon-list {margin-top: 20px;}
             .footer-soc-link {
                 display: flex;
                 justify-content: center;
